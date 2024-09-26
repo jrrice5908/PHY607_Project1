@@ -1,4 +1,13 @@
 # PHY607_Project1
 
-README file
-Files/Modules for Project 1 
+In this repository I have created five separate python files, two for the methods applied to an RC circuit and three for the methods applied to a volume charge distribution. 
+
+To use this repo, navigate to the directory where you want to clone it:
+
+cd /path/you/want/repo 
+
+then clone the repo and cd into it:
+
+git clone git@gitlab.com: # with ssh
+cd PHY607_Project1
+
