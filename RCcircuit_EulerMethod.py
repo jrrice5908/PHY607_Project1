@@ -26,4 +26,4 @@ plt.xlabel('time, seconds')
 plt.title("Charge on Capacitor vs Time")
 plt.show
 
-plt.savefig("Charg_vs_Time_Cap.png")
+plt.savefig("ChargevsTimeEuler.png")
