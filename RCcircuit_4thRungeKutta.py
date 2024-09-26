@@ -3,17 +3,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
-def update(charge,step,T):
-    Qnew = np.add(charge,-(charge/T)*step)
+def r_update(charge,step,T):
+    k1 = -((charge)/T)*step
+    k2 = -(charge)+(k1*(step/2))
+    k3 = -(charge)+(k2*(step/2))
+    k4 = -(charge)+(k3*(step))
+    Qnew = np.add(charge,((k1/6)+(k2/3)+(k3/3)+(k4/6))*step)
     return Qnew
-
-def rk():
-    k1 = -(charge/T)
-    k2 = 
-    return 
-
 
 V = 100    
 R = 10     
@@ -23,9 +19,17 @@ T = R + C
 charge = np.array([1])     
 step = 0.001
 Q = []
-k = []
 
 for i in range(100000):                              
-    charge = update(charge,step,T)
+    charge = r_update(charge,step,T)
     Q.append(charge)
 t = np.arange(len(Q))*step
+
+
+
+plt.plot(t,Q)
+plt.ylabel('Q, coulombs')
+plt.xlabel('time, seconds')
+plt.title("Charge on capacitor vs Time")
+plt.show
+plt.savefig("ChargevsTimeRungeKutta.png")
