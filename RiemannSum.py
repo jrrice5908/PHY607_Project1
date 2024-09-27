@@ -24,10 +24,10 @@ C = 1
 
 totCharge = 0
 
-for i in range(xmin,xmax):
-        for j in range(ymin,ymax):
-            for k in range(zmin,zmax):
+for i in range(xmin,xmax,step_vol):
+        for j in range(ymin,ymax,step_vol):
+            for k in range(zmin,zmax,step_vol):
                 pointCharge = ChargeDist(i,j,k)*step_vol
                 totCharge = totCharge + pointCharge
         
-print (totCharge)
+print ("Total Charge = ",totCharge)
