@@ -17,8 +17,12 @@ then clone the repo and cd into it:
 ```
  cd PHY607_Project1
 ```
+You can run the following script in command line to execute all modules at once (both ODE and Integrals:
+```
+bash Main.sh
+```
 
-To get the file output, run the corresponding python command:
+Or, to get each individual file output, run the corresponding python command:
 
 ```
 $: python RCcircuit_EulerMethod.py
@@ -29,3 +33,5 @@ $: python TrapSum.py
 ```
 
 The output of the ODE files is a standard python plot. After the file is ran, a line in this module will save the figure to the pwd, you should be able to identify it by the name of the png. Each module produces solutions for two different sets of initial conditions. 
+
+The output of the Integral files is the result of the integration printed as a statement with units.
