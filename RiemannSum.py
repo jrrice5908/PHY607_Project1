@@ -30,4 +30,4 @@ for i in range(xmin, xmax, step_vol):
                 pointCharge = ChargeDist(i, j, k)*step_vol
                 totCharge = totCharge + pointCharge
         
-print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm")
+print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm^3")
