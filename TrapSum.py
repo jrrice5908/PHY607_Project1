@@ -1,4 +1,4 @@
-## Trapezoidal Rule
+# Trapezoidal Rule
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,11 +17,12 @@ ymax = 30
                          
 zmin = 0
 zmax = 50                       
-                         
+
+tot_vol=(xmax-xmin)*(ymax-ymin)*(zmax-zmin)                         
 a = 10
 C = 1
 
-totCharge = 0    
+totCharge = 0   #In units of Coulombs 
     
 for i in range(xmin,xmax,step_vol):
         for j in range(ymin,ymax,step_vol):
@@ -30,4 +31,4 @@ for i in range(xmin,xmax,step_vol):
                 totCharge = totCharge + pointCharge    
     
     
-print ("Total Charge = ",totCharge)
+print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol,"cm^3")
