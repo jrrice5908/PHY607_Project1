@@ -19,10 +19,10 @@ zmin = 0
 zmax = 50                       
 
 tot_vol=(xmax-xmin)*(ymax-ymin)*(zmax-zmin)                         
-a = 10
+a = 10				#Artbitray constants 
 C = 1
 
-totCharge = 0			#Giving charge an initial value such that I can call it in following algorithm
+totCharge = 0			#Giving charge an initial value such that I can call it in following algorithm, total charge given by Coulombs
 
 for i in range(xmin, xmax, step_vol):
         for j in range(ymin, ymax, step_vol):
@@ -30,4 +30,4 @@ for i in range(xmin, xmax, step_vol):
                 pointCharge = ChargeDist(i, j, k)*step_vol
                 totCharge = totCharge + pointCharge
         
-print ("Total Charge = ", totCharge, "across total volume,", tot_vol, "cm")
+print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm")
