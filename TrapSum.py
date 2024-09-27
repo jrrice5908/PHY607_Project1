@@ -7,6 +7,8 @@ def ChargeDist(x,y,z):
     charge = (4*C/(a**4))*((x*z)/(y+a)**2)
     return charge
 
+step_vol=1
+
 xmin = 0
 xmax = 20                       
 
