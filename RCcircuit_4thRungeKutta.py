@@ -10,13 +10,12 @@ def r_update(charge,step,T):
     k4 = -(charge)+(k3*(step))
     Qnew = np.add(charge,((k1/6)+(k2/3)+(k3/3)+(k4/6))*step)
     return Qnew
+  
+R = 30		#Ohms     
+C = 5      	#Farrads
+T = R + C  	#Time Constant
 
-V = 100    
-R = 10     
-C = 15      
-T = R + C  
-
-charge = np.array([1])     
+charge = np.array([10])     
 step = 0.001
 Q = []
 
@@ -32,4 +31,4 @@ plt.ylabel('Q, coulombs')
 plt.xlabel('time, seconds')
 plt.title("Charge on capacitor vs Time")
 plt.show
-plt.savefig("ChargevsTimeRungeKutta.png")
+plt.savefig("ChargevsTimeRungeKuttaAlternate.png")
