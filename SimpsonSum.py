@@ -35,3 +35,32 @@ for i in range(xmin,xmax,step_vol):
     
     
 print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm^3")
+
+#Different Initial Conditions
+
+xmin = 0
+xmax = 64
+
+ymin = 0
+ymax = 72
+
+zmin = 0
+zmax = 30
+
+tot_vol=(xmax-xmin)*(ymax-ymin)*(zmax-zmin)
+a = 10
+C = 1
+
+totCharge = 0
+
+for i in range(xmin,xmax,step_vol):
+        for j in range(ymin,ymax,step_vol):
+            for k in range(zmin,zmax,step_vol):
+                l=((i+1)-i)/step_vol
+                m=((j+1)-j)/step_vol
+                n=((k+1)-k)/step_vol
+                pointCharge = (1/2)*((l*m*n)/3)*(ChargeDist(i-1,j-1,k-1)+(4*ChargeDist(i,j,k))+ChargeDist(i+1,j+1,k+1))
+                totCharge = totCharge + pointCharge
+
+
+print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm^3")
