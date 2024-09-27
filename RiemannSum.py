@@ -31,3 +31,32 @@ for i in range(xmin, xmax, step_vol):
                 totCharge = totCharge + pointCharge
         
 print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm^3")
+
+#Different Initial Conditions
+
+xmin = 0
+xmax = 64
+
+ymin = 0
+ymax = 72
+
+zmin = 0
+zmax = 30
+
+tot_vol=(xmax-xmin)*(ymax-ymin)*(zmax-zmin)
+a = 10                          #Artbitray constants 
+C = 1
+
+totCharge = 0                   #Giving charge an initial value such that I can call it in following algorithm, total charge given by Coulombs
+
+for i in range(xmin, xmax, step_vol):
+        for j in range(ymin, ymax, step_vol):
+            for k in range(zmin, zmax, step_vol):
+                pointCharge = ChargeDist(i, j, k)*step_vol
+                totCharge = totCharge + pointCharge
+
+print ("Total Charge = ", totCharge, "C", "across total volume,", tot_vol, "cm^3")
+
+
+
+
