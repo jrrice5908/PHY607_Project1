@@ -7,11 +7,11 @@ def update(charge,step,T):
     Qnew = np.add(charge,-(charge/T)*step)
     return Qnew
         
-R = 10
-C = 15     
-T = R + C  
+R = 30		#Ohms
+C = 1     	#Farrads
+T = R + C  	#Time Constant
 
-charge = np.array([1])    
+charge = np.array([10])    
 step = 0.001
 Q = []
 
