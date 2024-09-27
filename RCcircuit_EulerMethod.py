@@ -27,3 +27,26 @@ plt.title("Charge on Capacitor vs Time")
 plt.show
 
 plt.savefig("ChargevsTimeEuler.png")
+
+# Different Initial Conditions:
+
+R = 30    
+C = 1     
+T = R + C  
+
+charge = np.array([10])     
+step = 0.001
+Q = []
+
+for i in range(100000):                              
+    charge = update(charge,step,T)
+    Q.append(charge)
+t = np.arange(len(Q))*step
+
+plt.plot(t,Q)
+plt.ylabel('Q, coulombs')
+plt.xlabel('time, seconds')
+plt.title("Charge on capacitor as function of time")
+plt.show
+
+plt.savefig("ChargevsTimeEuler2.png")
