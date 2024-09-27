@@ -8,6 +8,9 @@ cd /path/you/want/repo
 
 then clone the repo and cd into it:
 
-git clone git@github.com:jrrice5908/PHY607_Project1.git # with ssh
-cd PHY607_Project1
-
+'''
+ /git clone git@github.com:jrrice5908/PHY607_Project1.git # with ssh
+'''
+'''
+ cd PHY607_Project1
+'''
